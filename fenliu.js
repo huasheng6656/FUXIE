@@ -1,5 +1,3 @@
-// Define the `main` function
-
 const proxyName = "代理模式";
 
 function main(params) {
@@ -9,9 +7,17 @@ function main(params) {
     overwriteDns(params);
     return params;
 }
-//覆写规则
+
+// 覆写规则
 function overwriteRules(params) {
     const rules = [
+        // 确保直连规则优先生效
+        "DOMAIN-SUFFIX,baidu.com,DIRECT",
+        "DOMAIN-SUFFIX,tencent.com,DIRECT",
+        "DOMAIN-SUFFIX,linux.do,DIRECT",
+        "DOMAIN-SUFFIX,bilibili.com,DIRECT",
+
+        // 原有的规则集，保持顺序
         "RULE-SET,reject,广告拦截",
         "RULE-SET,direct,DIRECT",
         "RULE-SET,cncidr,DIRECT",
@@ -33,6 +39,7 @@ function overwriteRules(params) {
         "RULE-SET,proxy," + proxyName,
         "MATCH,漏网之鱼",
     ];
+
     const ruleProviders = {
         reject: {
             type: "http",
@@ -90,7 +97,7 @@ function overwriteRules(params) {
         telegramcidr: {
             type: "http",
             behavior: "ipcidr",
-            url: "hhttps://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
+            url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
             path: "./ruleset/custom/telegramcidr.yaml"
         },
         direct: {
@@ -128,13 +135,6 @@ function overwriteRules(params) {
             path: "./ruleset/tld-not-cn.yaml",
             interval: 86400,
         },
-        telegramcidr: {
-            type: "http",
-            behavior: "ipcidr",
-            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
-            path: "./ruleset/telegramcidr.yaml",
-            interval: 86400,
-        },
         cncidr: {
             type: "http",
             behavior: "ipcidr",
@@ -160,7 +160,8 @@ function overwriteRules(params) {
     params["rule-providers"] = ruleProviders;
     params["rules"] = rules;
 }
-//覆写代理组
+
+// 覆写代理组
 function overwriteProxyGroups(params) {
     // 所有代理
     const allProxies = params["proxies"].map((e) => e.name);
@@ -186,7 +187,7 @@ function overwriteProxyGroups(params) {
         }))
         .filter((item) => item.proxies.length > 0);
 
-    //手工选择代理组
+    // 手工选择代理组
     const manualProxyGroups = [
         { name: "HK-手工选择", regex: /香港|HK|Hong|🇭🇰/, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/hk.svg" },
         { name: "TW-手工选择", regex: /台湾|TW|Taiwan|Wan|🇨🇳|🇹🇼/, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg" },
@@ -266,28 +267,24 @@ function overwriteProxyGroups(params) {
             name: "电报消息",
             type: "select",
             proxies: [proxyName, "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
         },
         {
             name: "ChatGPT",
             type: "select",
             proxies: [proxyName, "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
         },
         {
             name: "Claude",
             type: "select",
             proxies: [proxyName, "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/claude.svg"
         },
         {
             name: "Spotify",
             type: "select",
             proxies: [proxyName, "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://storage.googleapis.com/spotifynewsroom-jp.appspot.com/1/2020/12/Spotify_Icon_CMYK_Green.png"
         },
         {
@@ -309,9 +306,9 @@ function overwriteProxyGroups(params) {
     groups.push(...autoProxyGroups);
     groups.push(...manualProxyGroupsConfig);
     params["proxy-groups"] = groups;
-
 }
-//防止dns泄露
+
+// 防止DNS泄露
 function overwriteDns(params) {
     const cnDnsList = [
         "https://223.5.5.5/dns-query",
@@ -322,36 +319,20 @@ function overwriteDns(params) {
         "https://1.0.0.1/dns-query",
         "https://1.1.1.1/dns-query",
     ];
-    // const notionDns = 'tls://dns.jerryw.cn'
-    // const notionUrls = [
-    //     'http-inputs-notion.splunkcloud.com',
-    //     '+.notion-static.com',
-    //     '+.notion.com',
-    //     '+.notion.new',
-    //     '+.notion.site',
-    //     '+.notion.so',
-    // ]
-    // const combinedUrls = notionUrls.join(',');
+
     const dnsOptions = {
         enable: true,
         "prefer-h3": true, // 如果DNS服务器支持DoH3会优先使用h3
         "default-nameserver": cnDnsList, // 用于解析其他DNS服务器、和节点的域名, 必须为IP, 可为加密DNS。注意这个只用来解析节点和其他的dns，其他网络请求不归他管
         nameserver: trustDnsList, // 其他网络请求都归他管
-
-        // 这个用于覆盖上面的 nameserver
         "nameserver-policy": {
-            //[combinedUrls]: notionDns,
             "geosite:cn": cnDnsList,
             "geosite:geolocation-!cn": trustDnsList,
-            // 如果你有一些内网使用的DNS，应该定义在这里，多个域名用英文逗号分割
-            // '+.公司域名.com, www.4399.com, +.baidu.com': '10.0.0.1'
         },
         fallback: trustDnsList,
         "fallback-filter": {
             geoip: true,
-            //除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染 geoip-code 配置的国家的结果会直接采用，否则将采用 fallback结果
             "geoip-code": "CN",
-            //geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
             geosite: ["gfw"],
             ipcidr: ["240.0.0.0/4"],
             domain: ["+.google.com", "+.facebook.com", "+.youtube.com"],
