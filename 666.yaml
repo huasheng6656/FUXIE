@@ -53,6 +53,7 @@ ClassicalText: &ClassicalText {type: http, interval: 86400, behavior: classical,
 proxy-providers:
   机场A: {<<: *PProviders, url: 'https://link02.pikachucloud.site/api/v1/client/subscribe?token=3883f720a105700f811187b62e9dfd58&flag=ClashMeta', override: {additional-prefix: '[宝可梦] '}}
   机场B: {<<: *PProviders, url: 'https://gates.djjc.cfd/api/v1/client/subscribe?token=b25ed55ce913006c00bc507555317e9a', override: {additional-prefix: '[顶级机场] '}}
+  机场c: {<<: *PProviders, url: 'https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Ftomproxy.us.kg%2Fapi%2Fv1%2Findex.php%3Ftoken%3DsiubjQKSBKJABFCALWJKDNB&insert=false', override: {additional-prefix: '[公益] '}}
 
 # 全局配置
 port: 7890
