@@ -56,7 +56,7 @@ proxy-providers:
   机场c: {<<: *PProviders, url: 'https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Ftomproxy.us.kg%2Fapi%2Fv1%2Findex.php%3Ftoken%3DsiubjQKSBKJABFCALWJKDNB&insert=false', override: {additional-prefix: '[公益] '}}
   机场D: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=9e411cb56f371b32185b1c511b072183', override: {additional-prefix: '[宝可梦白嫖] '}}
   机场E: {<<: *PProviders, url: 'https://ovo.o00o.ooo/ooo', override: {additional-prefix: '[TG里的欢乐时光] '}}
-  机场E: {<<: *PProviders, url: 'https://share.lzf.email/proxy.php?uuid=a2d6712834&sid=all&target=clash', override: {additional-prefix: '[聚合] '}}
+  机场F: {<<: *PProviders, url: 'https://share.lzf.email/proxy.php?uuid=a2d6712834&sid=all&target=clash', override: {additional-prefix: '[聚合] '}}
 
 # 全局配置
 port: 7890
