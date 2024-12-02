@@ -58,6 +58,7 @@ proxy-providers:
   机场E: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=85f139b729a7cd12c965d3ed98bfdf88', override: {additional-prefix: '[宝可梦白嫖2] '}}
   机场F: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=1ea0fe733ebd0b7a3127a5d5d728c415', override: {additional-prefix: '[宝可梦白嫖3] '}}
   机场G: {<<: *PProviders, url: 'https://dingyue.myzone.site/link/%77%79%65%66%75%32%78%6E%6D%70%34%7A%74%74%66%6B?clash=2', override: {additional-prefix: '[BUG] '}}
+  机场G: {<<: *PProviders, url: 'https://submit.xz61.cn:23443/api/v1/client/subscribe?token=97a8f34424a767116c02f1748ffcceba', override: {additional-prefix: '[CAC] '}}
 
 # 全局配置
 port: 7890
