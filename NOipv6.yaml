@@ -69,7 +69,7 @@ proxy-providers:
   机场O: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c5575c437d9aeecef17fd52f0ac05128', override: {additional-prefix: '[宝可梦01] '}}
   机场P: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=37dfa5db5a847a53596639aea4a335c6', override: {additional-prefix: '[宝可梦02] '}}
   机场M: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5c03045c6c6a6375c5f64793fe78d491', override: {additional-prefix: '[宝可梦03] '}}
-
+  机场1: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=85f139b729a7cd12c965d3ed98bfdf88', override: {additional-prefix: '[宝可梦04] '}}
 
   
 # 全局配置
