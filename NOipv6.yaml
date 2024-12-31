@@ -56,7 +56,7 @@ proxy-providers:
   机场B: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=51491fdcdb60fee5a10b8445e34de7d7', override: {additional-prefix: '[宝可梦1] '}}
   机场c: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=dde17f577a9ae2548c4bdbffdfef7202', override: {additional-prefix: '[公益] '}}
   机场D: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=9e411cb56f371b32185b1c511b072183', override: {additional-prefix: '[宝可梦白嫖] '}}
-  机场E: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=85f139b729a7cd12c965d3ed98bfdf88', override: {additional-prefix: '[宝可梦白嫖2] '}}
+  机场E: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=0d67367cd148f78e0f0fc88d879921a3', override: {additional-prefix: '[宝可梦白嫖2] '}}
   机场F: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=1ea0fe733ebd0b7a3127a5d5d728c415', override: {additional-prefix: '[宝可梦白嫖3] '}}
   机场G: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=72c4f67d56f97a1dae92771dedefe260', override: {additional-prefix: '[宝可梦白嫖0] '}}
   机场U: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=f203e4a8e794d843b1f6872b6b75dc71', override: {additional-prefix: '[宝可梦白嫖8] '}}
