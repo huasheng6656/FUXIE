@@ -70,7 +70,8 @@ proxy-providers:
   机场P: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=37dfa5db5a847a53596639aea4a335c6', override: {additional-prefix: '[宝可梦02] '}}
   机场M: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5c03045c6c6a6375c5f64793fe78d491', override: {additional-prefix: '[宝可梦03] '}}
   机场1: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=85f139b729a7cd12c965d3ed98bfdf88', override: {additional-prefix: '[宝可梦04] '}}
-
+  机场2: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=39dcea3a4f9730fe865b352c6129bdea', override: {additional-prefix: '[宝可梦05] '}}
+  机场3: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=9fe446e9788a1aef925de7f898a74ce0#%E5%AE%9D%E5%8F%AF%E6%A2%A6', override: {additional-prefix: '[宝可梦06] '}}
   
 # 全局配置
 port: 7890
