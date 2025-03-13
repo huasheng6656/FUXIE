@@ -51,34 +51,22 @@ ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical,
 
 # 远程订阅组
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[A]为每个节点添加机场名称前缀，可自定义
-pproxy-providers:
-  机场A: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=eff400e1f637269813484e177ebd7c12', override: {additional-prefix: '[宝可梦] '}}
-  机场B: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=51491fdcdb60fee5a10b8445e34de7d7', override: {additional-prefix: '[宝可梦1] '}}
-  机场c: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=dde17f577a9ae2548c4bdbffdfef7202', override: {additional-prefix: '[公益] '}}
-  机场D: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=9e411cb56f371b32185b1c511b072183', override: {additional-prefix: '[宝可梦白嫖] '}}
-  机场E: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=0d67367cd148f78e0f0fc88d879921a3', override: {additional-prefix: '[宝可梦白嫖2] '}}
-  机场F: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=ad3fadadaa9a3a643679928c65131b92', override: {additional-prefix: '[宝可梦白嫖3] '}}
-  机场G: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=72c4f67d56f97a1dae92771dedefe260', override: {additional-prefix: '[宝可梦白嫖0] '}}
-  机场U: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=f203e4a8e794d843b1f6872b6b75dc71', override: {additional-prefix: '[宝可梦白嫖8] '}}
-  机场Q: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=39165cfe9827112c15090dbf773e83bf', override: {additional-prefix: '[宝可梦白嫖4] '}}
-  机场W: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=1bf8b8d1d66213c664d8d5bf6c5bbee8', override: {additional-prefix: '[宝可梦白嫖5] '}}
-  机场R: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=e06286fdf224885e9f886dc1be730f97', override: {additional-prefix: '[宝可梦白嫖6] '}}
-  机场T: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=518f2c2b80474acdb9ffe8d087d55d6c', override: {additional-prefix: '[宝可梦白嫖7] '}}
-  机场Y: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5b5bad1e76e8df812bf913c584b858cb', override: {additional-prefix: '[宝可梦白嫖9] '}}
-  机场I: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=21d17feb5cacd1eb73aea759229874e3', override: {additional-prefix: '[宝可梦10] '}}
-  机场O: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c5575c437d9aeecef17fd52f0ac05128', override: {additional-prefix: '[宝可梦01] '}}
-  机场P: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c633463fec5228e3416ceeed12e50118', override: {additional-prefix: '[宝可梦02] '}}
-  机场M: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5c03045c6c6a6375c5f64793fe78d491', override: {additional-prefix: '[宝可梦03] '}}
-  机场1: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=fab486b8a21283d48ca3fbc8cf9d8025', override: {additional-prefix: '[宝可梦04] '}}
-  机场2: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=39dcea3a4f9730fe865b352c6129bdea', override: {additional-prefix: '[宝可梦05] '}}
-  机场3: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=9fe446e9788a1aef925de7f898a74ce0#%E5%AE%9D%E5%8F%AF%E6%A2%A6', override: {additional-prefix: '[宝可梦06] '}}
-  机场4: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=103cf046de9f8bbf9179ddecbfd3b752', override: {additional-prefix: '[宝可梦07] '}}
-  机场5: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=8fdce87d7843636377afb33845c69f10', override: {additional-prefix: '[宝可梦08] '}}
-  机场6: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=b88448888ce668be9c86a97d3e143365', override: {additional-prefix: '[宝可梦09] '}}
-  机场7: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=ecb59ca52a06a541c4c7bed6a5b8a055', override: {additional-prefix: '[宝可梦10] '}}
-  机场8: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c78fbd38f40663710843a727d88170f4', override: {additional-prefix: '[机场8] '}}
+proxy-providers:
+  机场A: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c5575c437d9aeecef17fd52f0ac05128', override: {additional-prefix: '[A] '}}
+  机场B: {<<: *PProviders, url: 'https://subscription.sukiaira.com/api/v1/client/subscribe?token=f85533b4b96b89c75b7ad5a5c9ec1692', override: {additional-prefix: '[B] '}}
+  机场C: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=103cf046de9f8bbf9179ddecbfd3b752', override: {additional-prefix: '[C] '}}
+  机场D: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=51491fdcdb60fee5a10b8445e34de7d7', override: {additional-prefix: '[D] '}}
+  机场E: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5c03045c6c6a6375c5f64793fe78d491', override: {additional-prefix: '[E] '}}
+  机场F: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c78fbd38f40663710843a727d88170f4', override: {additional-prefix: '[F] '}}
+  机场G: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=39dcea3a4f9730fe865b352c6129bdea', override: {additional-prefix: '[G] '}}
+  机场H: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=0d67367cd148f78e0f0fc88d879921a3', override: {additional-prefix: '[H] '}}
+  机场I: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=72c4f67d56f97a1dae92771dedefe260', override: {additional-prefix: '[I] '}}
+  机场J: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=8fdce87d7843636377afb33845c69f10', override: {additional-prefix: '[J] '}}  
+  机场K: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5b5bad1e76e8df812bf913c584b858cb', override: {additional-prefix: '[K] '}}
 
-  
+
+
+
 # 全局配置
 port: 7890
 socks-port: 7891
