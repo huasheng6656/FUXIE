@@ -257,7 +257,7 @@ rule-providers:
     url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml 
   fix-direct:
     <<: *ClassicalYaml
-    url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/fix-direct.yaml
+    url: https://raw.githubusercontent.com/huasheng6656/FUXIE/refs/heads/main/fix-direct.yaml
   Line:
     <<: *ClassicalYaml
     url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/Line.yaml
