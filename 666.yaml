@@ -65,7 +65,7 @@ proxy-providers:
   机场K: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5b5bad1e76e8df812bf913c584b858cb', override: {additional-prefix: '[K] '}}
   机场L: {<<: *PProviders, url: 'https://topsex.cc/api/v1/client/subscribe?token=5a7747289e1e701f20f64bc815de01ea', override: {additional-prefix: '[L] '}}
   机场Z: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=2a83e682cf1f50113d9b43b8c69f0934', override: {additional-prefix: '[Z] '}}        
-  机场X: {<<: *PProviders, url: 'https://imperialb.in/r/crbvnnsm', override: {additional-prefix: '[X] '}}
+  机场X: {<<: *PProviders, url: 'https://z.7li7li.com/api/v1/client/subscribe?token=aa7a15bce1e665019ed6d3db766844d0', override: {additional-prefix: '[X] '}}
 
 # 全局配置
 port: 7890
