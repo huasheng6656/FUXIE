@@ -53,7 +53,7 @@ ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical,
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[A]为每个节点添加机场名称前缀，可自定义
 proxy-providers:
   机场A: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=c5575c437d9aeecef17fd52f0ac05128', override: {additional-prefix: '[A] '}}
-  机场B: {<<: *PProviders, url: 'https://share.lzf.email/proxy.php?uuid=a2d6712834&sid=all&target=clashr', override: {additional-prefix: '[B] '}}
+  机场B: {<<: *PProviders, url: 'https://bh.jiedianxielou.workers.dev', override: {additional-prefix: '[B] '}}
   机场C: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=103cf046de9f8bbf9179ddecbfd3b752', override: {additional-prefix: '[C] '}}
   机场D: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=51491fdcdb60fee5a10b8445e34de7d7', override: {additional-prefix: '[D] '}}
   机场E: {<<: *PProviders, url: 'https://52pokemon.xz61.cn/api/v1/client/subscribe?token=5c03045c6c6a6375c5f64793fe78d491', override: {additional-prefix: '[E] '}}
